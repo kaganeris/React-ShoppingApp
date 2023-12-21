@@ -1,0 +1,94 @@
+.slider {
+  border-radius: 40px;
+  max-height: 25rem;
+  height: 25rem;
+  width: 85%;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+}
+
+.slider-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.slider-img {
+  height: 100%;
+  width: 100%;
+  opacity: 0; /* Başlangıçta resimlerin görünürlüğünü sıfıra ayarlayın */
+  transition: opacity 1.5s ease-in;
+  position: absolute;
+}
+
+.slider-slide-left {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.slider-slide-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.content {
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.slider-slide button{
+  background: none;
+  border: none;
+}
+
+.icon-btn{
+  color: white;
+  size: 45px;
+}
+
+.icon-btn:hover{
+  color: black;
+  cursor: pointer;
+}
+
+.content > h4 {
+  color: white; /* Metin rengi: Beyaz */
+  font-size: 25px;
+  border-radius: 6px;
+}
+
+.content > p {
+  background-color: rgba(0, 0, 0, 0.8);
+  font-size: 20px;
+  margin-top: 8px;
+}
+
+.sliderImages {
+  display: flex;
+}
+
+.slider-img.active {
+  opacity: 1; /* Aktif resmin görünürlüğünü tam yapın */
+}
+
+.progressBar {
+  position: absolute;
+  overflow: hidden;
+  bottom: 0;
+  background-color: #eee;
+  width: 100%;
+  height: 5px;
+}

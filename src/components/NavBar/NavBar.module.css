@@ -1,0 +1,39 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 15px;
+  background: linear-gradient(to left, grey, black);
+  height: 3rem;
+  padding-left: 20px;
+}
+
+.navbar > ul {
+  display: flex;
+  list-style-type: none;
+  gap: 2rem;
+}
+
+.navbar > ul > li > a {
+  font-size: large;
+  color: white;
+  text-decoration: none;
+}
+
+.basket-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-right: 50px;
+}
+
+.basket-container span {
+  background-color: black;
+  color: white;
+  padding: 4px;
+  border-radius: 500%;
+  font-size: 12px;
+  position: absolute;
+  top: -5px;
+  left: 35px;
+}

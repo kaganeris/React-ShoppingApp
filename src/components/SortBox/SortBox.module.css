@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+    justify-content: end;
+}
+
+.container > div{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
