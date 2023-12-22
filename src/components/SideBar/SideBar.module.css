@@ -7,7 +7,7 @@
   height: 100%;
   border-radius: 20px;
   width: 350px;
-  background-color:honeydew;
+  background-color:gray;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
   transition: right 0.5s ease;
   z-index: 1;
@@ -20,7 +20,7 @@
 .container h3 {
   margin: 20px 0;
   font-size: 24px;
-  color: #333;
+  color: white;
 }
 
 .scrollableContent {
@@ -32,17 +32,23 @@
   justify-content: space-evenly;
 }
 
+.content{
+  position: absolute;
+  bottom: 0;
+  left:35px;
+}
+
 .content p {
   margin: 10px 0;
   font-size: 16px;
-  color: #555;
+  color: white;
 }
 
 .content button {
   padding: 10px 20px;
   font-size: 16px;
-  color: #fff;
-  background-color: #007bff;
+  color: black;
+  background-color: orange;
   border: none;
   border-radius: 5px;
   cursor: pointer;

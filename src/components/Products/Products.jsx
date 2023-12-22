@@ -1,27 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ProductCard from "../ProductCard/ProductCard";
-import styles from "./Products.module.css"
+import styles from "./Products.module.css";
+import { ProjectContext } from "../../context/ProjectContext";
 
-const Products = () => {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    (async () => {
-        try {
-            const res = await fetch("https://dummyjson.com/products");
-            const data = await res.json();
-            setProducts(data.products);
-        } catch (error) {
-            console.log(error);
-        }
-    })();
-  }, []);
-
+const Products = ({ products }) => {
   return (
     <div className={styles.productList}>
-      {products.map((product) => {
-        return <ProductCard key={product.id} product={product} />
-      }
+      {products.length === 0 ? (
+        <div className={styles.container}>
+          <h1 className={styles.title}>Üzgünüz, Aradığınız Ürünler Bulunamadı</h1>
+          <p className={styles.text}>
+            Aradığınız ürünler şu anda mevcut değil. Lütfen filtrelerinizi değiştirin.
+          </p>
+          {/* Buraya istediğiniz tasarımı ekleyebilirsiniz */}
+        </div>
+      ) : (
+        products.map((product) => {
+          return <ProductCard key={product.id} product={product} />;
+        })
       )}
     </div>
   );

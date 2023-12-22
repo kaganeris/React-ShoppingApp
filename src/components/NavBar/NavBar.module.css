@@ -29,8 +29,8 @@
 }
 
 .basket-container span {
-  background-color: black;
-  color: white;
+  color: black;
+  font-weight: bold;
   padding: 4px;
   border-radius: 500%;
   font-size: 12px;

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import Slider from "../../components/Slider/Slider";
 import Products from "../../components/Products/Products";
+import { ProjectContext } from "../../context/ProjectContext";
 
 const HomePage = () => {
   const slideImages = [
@@ -36,11 +37,13 @@ const HomePage = () => {
     },
   ];
 
+  const {products} = useContext(ProjectContext)
+
   return (
     <div>
       <Slider slideImages={slideImages} />
       <br />
-      <Products />
+      <Products products={products}/>
     </div>
   );
 };
