@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./NavBar.module.css";
 import { SlBasket } from "react-icons/sl";
+import { ProjectContext } from "../../context/ProjectContext";
 
 const NavBar = () => {
+
+  const {isCartOpen,setIsCartOpen,basketProducts} = useContext(ProjectContext)
+
+  const handleBasket = () => {
+    if(isCartOpen){
+      setIsCartOpen(false)
+    }
+    else{
+      setIsCartOpen(true)
+    }
+  }
+
   return (
     <div className={styles.navbar}>
         <ul>
@@ -14,8 +27,8 @@ const NavBar = () => {
           </li>
         </ul>
         <div className={styles['basket-container']}>
-        <SlBasket size={30}/>
-        <span>4</span>
+        <SlBasket onClick={handleBasket} size={30}/>
+        <span>{basketProducts.length}</span>
         </div>
     </div>
   );

@@ -1,0 +1,37 @@
+.productCard{
+    display: flex;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 0px 5px 3px;
+    width: 85%;
+    height: 200px;
+    overflow: hidden;
+    margin-left: 15px;
+}
+
+.productCard:hover {
+    transform: translateY(-5px);
+  }
+
+.imgCard{
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 8px;
+}
+
+.imgDiv{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

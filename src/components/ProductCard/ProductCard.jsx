@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./ProductCard.module.css";
+import { ProjectContext } from "../../context/ProjectContext";
 
 const ProductCard = ({product}) => {
+
+  const {setBasketProducts,basketProducts} = useContext(ProjectContext)
+  
+  const handleAddBasket = () => {
+    setBasketProducts(prev => [...prev,product])
+  }
 
   return (
     <div className={styles.productCard}>
@@ -16,7 +23,7 @@ const ProductCard = ({product}) => {
           <p>Fiyatı: {product.price}</p>
         </div>
         <div className={styles['content-btn']}>
-          <button>Sepete Ekle</button>
+          <button onClick={handleAddBasket}>Sepete Ekle</button>
         </div>
       </div>
     </div>
